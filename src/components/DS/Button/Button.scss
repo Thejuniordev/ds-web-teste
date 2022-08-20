@@ -2,6 +2,8 @@
 
 .btn {
     cursor: pointer;
+    position: relative;
+    transition: all .3s ease;
     width: 100%;
     padding: 12px 24px;
     border: none;
@@ -14,10 +16,12 @@
 
     &__default {
         background-color: $brand-pure;
+        transition: all .3s ease;
     }
 
     &:hover {
         background-color: $brand-dark;
+        transition: all .3s ease;
     }
 
     &:disabled {
@@ -28,7 +32,7 @@
     &.small {
         max-width: 100px;
     }
-    
+
     &.medium {
         max-width: 224px;
     }
