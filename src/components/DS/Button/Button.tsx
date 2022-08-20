@@ -5,7 +5,6 @@ import './Button.scss';
 interface Props {
     color: string;
     children?: React.ReactNode;
-    type?: string;
     disabled?: boolean;
     size?: string;
     onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
@@ -14,7 +13,6 @@ interface Props {
 export const Button: React.FC<Props> = ({
     color,
     children,
-    type,
     disabled = false,
     size,
     onClick,
