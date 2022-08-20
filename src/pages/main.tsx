@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../components/DS/Button";
-import InputText from "../components/DS/Input";
+
+import Form from "../components/Form";
 
 import Logo from '../assets/img/logo.png';
 
@@ -16,6 +16,8 @@ export const Main = () => {
         </figure>
 
         <h1 className="main__title">Informe seus dados</h1>
+
+        <Form />
       </div>
     </div>
   );
