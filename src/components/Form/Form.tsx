@@ -9,18 +9,21 @@ export const Form = () => {
       <form className='form'>
         <div className="form__content">
             <InputText 
+                tabIndex={1}
                 field={''}
                 label='Número de celular'
                 placeholder='(xx) 00000-0000' 
                 size='medium' 
             />
             <InputText 
+                tabIndex={2}
                 field={''} 
                 label='Seu CPF'
                 placeholder='000.000.000-00'
                 size='medium'
             />
             <InputText 
+                tabIndex={3}
                 field={''} 
                 label='Seu e-mail'
                 placeholder='exemplo@email.com'
