@@ -1,0 +1,63 @@
+@import '../../../styles/tokens.scss';
+
+.input {
+    position: relative;
+    width: 100%;
+
+    &__label {
+        display: block;
+        font-size: $paragraph;
+        font-weight: $font-weight-medium;
+        line-height: $line-height-16;
+        margin-bottom: 7px;
+    }
+
+    input {
+        width: 100%;
+        background-color: $white;
+        border: 1px solid $gray;
+        border-radius: 2px;
+        padding: 11px 14px;
+
+        &::placeholder {
+            color: $gray;
+        }
+    }
+
+    &__focus {
+
+        input {
+            border: 1px solid $brand-pure; 
+
+            &::placeholder {
+                color: $black;
+            }
+
+        }
+    }
+    &__error {
+        display: block;
+        color: $error;
+        font-size: $caption;
+        font-weight: $font-weight-regular;
+        line-height: $line-height-16;
+        margin-top: 7px;
+    }
+
+    &__help {
+        display: block;
+        font-size: $caption;
+        font-weight: $font-weight-regular;
+        line-height: $line-height-16;
+        margin-top: 7px;
+    }
+
+    &__small {
+        max-width: 270px;
+    }
+
+    &__medium {
+        max-width: 304px;
+    }
+
+}
