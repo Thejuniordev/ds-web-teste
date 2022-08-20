@@ -10,3 +10,10 @@
 body {
     font-family: $font-family-ds;
 }
+
+.container {
+    width: 100%;
+    max-width: 976px;
+    margin: auto;
+    padding: 0 $spacing-s;
+}
