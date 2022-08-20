@@ -18,6 +18,10 @@
         border: 1px solid $gray;
         border-radius: 2px;
         padding: 11px 14px;
+        font-size: $paragraph;
+        font-weight: $font-weight-regular;
+        font-family: $font-family-ds;
+        line-height: $line-height-16;
 
         &::placeholder {
             color: $gray;

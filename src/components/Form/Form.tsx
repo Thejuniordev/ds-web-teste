@@ -10,7 +10,7 @@ export const Form = () => {
         <div className="form__content">
             <InputText 
                 tabIndex={1}
-                field={''}
+                field={'phone'}
                 label='Número de celular'
                 placeholder='(xx) 00000-0000' 
                 mask="(00) 00000-0000"
@@ -20,7 +20,7 @@ export const Form = () => {
             />
             <InputText 
                 tabIndex={2}
-                field={''} 
+                field={'cpf'} 
                 label='Seu CPF'
                 placeholder='000.000.000-00'
                 mask="000.000.000-00"
@@ -30,7 +30,7 @@ export const Form = () => {
             />
             <InputText 
                 tabIndex={3}
-                field={''} 
+                field={'email'} 
                 label='Seu e-mail'
                 placeholder='exemplo@email.com'
                 mask={/^\S*@?\S*$/}
