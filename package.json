@@ -1,7 +1,9 @@
 {
   "name": "ds-web-teste",
   "version": "0.1.0",
-  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -16,10 +18,16 @@
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
+
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "sass-loader": "^12.4.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --coverage",
+    "test:watch": "yarn test --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
