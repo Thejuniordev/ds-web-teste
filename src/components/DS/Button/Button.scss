@@ -1,0 +1,35 @@
+@import '../../../styles/tokens.scss';
+
+.btn {
+    cursor: pointer;
+    width: 100%;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-family: $font-family-ds;
+    font-size: $paragraph;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-16;
+    color: $white;
+
+    &__default {
+        background-color: $brand-pure;
+    }
+
+    &:hover {
+        background-color: $brand-dark;
+    }
+
+    &:disabled {
+        cursor: no-drop;
+        background-color: $gray;
+    }
+
+    &.small {
+        max-width: 100px;
+    }
+    
+    &.medium {
+        max-width: 224px;
+    }
+}

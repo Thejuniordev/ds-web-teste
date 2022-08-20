@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../components/DS/Button";
 
 export const Main = () => {
 
