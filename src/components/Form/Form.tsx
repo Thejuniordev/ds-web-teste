@@ -13,21 +13,29 @@ export const Form = () => {
                 field={''}
                 label='Número de celular'
                 placeholder='(xx) 00000-0000' 
-                size='medium' 
+                mask="(00) 00000-0000"
+                pattern="[\(\)\s\-0-9]*"
+                size='medium'
+                messageError='Celular obrigatório' 
             />
             <InputText 
                 tabIndex={2}
                 field={''} 
                 label='Seu CPF'
                 placeholder='000.000.000-00'
+                mask="000.000.000-00"
+                pattern="[\-\.0-9]*"
                 size='medium'
+                messageError='CPF obrigatório' 
             />
             <InputText 
                 tabIndex={3}
                 field={''} 
                 label='Seu e-mail'
                 placeholder='exemplo@email.com'
+                mask={/^\S*@?\S*$/}
                 size='medium'
+                messageError='E-mail obrigatório' 
             />
         </div>
         <Button color={'default'} disabled={true} size='medium'>Próximo</Button>
