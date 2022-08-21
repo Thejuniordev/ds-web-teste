@@ -21,9 +21,18 @@ export interface Props extends React.AriaAttributes {
   invalid?: boolean;
   type?: string;
   size?: string;
-  pattern?: string
-  format?: string
+  pattern?: string;
+  format?: string;
   mask?: string | RegExp | { mask: string | RegExp }
+  inputMode?:
+    | 'none'
+    | 'text'
+    | 'tel'
+    | 'url'
+    | 'email'
+    | 'numeric'
+    | 'decimal'
+    | 'search'
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
@@ -53,6 +62,7 @@ export const InputText: React.FC<Props> = ({
     pattern,
     format,
     mask,
+    inputMode,
     onChange,
     onFocus,
     onBlur,
@@ -195,6 +205,7 @@ export const InputText: React.FC<Props> = ({
         placeholder={placeholder}
         className={classNameInput}
         type={type}
+        inputMode={inputMode}
         id={field}
         value={value}
         name={field}

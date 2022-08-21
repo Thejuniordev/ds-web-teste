@@ -25,6 +25,7 @@ export const Form = () => {
         <form className='form' onSubmit={handleSubmit}>
             <div className="form__content">
                 <InputText 
+                    inputMode="numeric"
                     tabIndex={1}
                     field={'phone'}
                     value={phone}
@@ -37,6 +38,7 @@ export const Form = () => {
                     messageError={!phone ? 'Celular obrigatório' : ''}
                 />
                 <InputText 
+                    inputMode="numeric"
                     tabIndex={2}
                     field={'cpf'} 
                     value={document}
@@ -49,6 +51,8 @@ export const Form = () => {
                     messageError={!document ? 'CPF obrigatório' : ''}
                 />
                 <InputText 
+                    type='mail'
+                    inputMode="email"
                     tabIndex={3}
                     field={'email'} 
                     value={email}

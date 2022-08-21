@@ -4,11 +4,7 @@ import Main from "./pages/main";
 import "./styles/base.scss";
 
 export const App = () => {
-  return (
-    <div>
-      <Main />
-    </div>
-  );
+  return <Main />;
 };
 
 export default App;
