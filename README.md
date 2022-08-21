@@ -1,46 +1,108 @@
-# Getting Started with Create React App
+<h1 align="center">DS Web Teste</h1>
+<br>
+<h3 align="center"> 🚀 Challenge for The bridge 🚀 </h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Link to figma
+<a href="https://www.figma.com/file/7njyPDwM2R1HzaksCSIKlK/DS-web-teste" target="_blank">
+ ✏️ Figma ✏️
+</a>
 
-## Available Scripts
+## Rules 💻 
+<hr>
+    <ul>
+        <li>Criar o layout de acordo com o Protótipo</li>
+        <li>Todos os 3 campos (CPF, celular e e-mail) são obrigatórios </li>
+        <li>Se os dados preenchidos no formulário estiverem válidos (apenas o preenchimento e não a validação do dado em si) o botão 'enviar deve ser habilitado</li>
+        <li>Ao clicar no botão "Enviar" todas as informações preenchidas em cada campo deve aparecer no console dentro de um objeto para demonstrar a funcionalidade</li>
+    </ul>
 
-In the project directory, you can run:
+## Tools 🛠️
+<hr>
+ - React
+ <br>
+ - Further increase the knowledge base of beginning devs.
 
-### `npm start`
+## Screenshots Cross-Browser 🖼
+<hr>
+ - Chrome (desktop)
+<img src="./readme-images/chrome.png" alt="Chrome Desktop"> 
+ - Safari (desktop)
+<img src="./readme-images/safari.png" alt="Safari Desktop"> 
+ - Edge (desktop)
+<img src="./readme-images/edge.png" alt="Edge Desktop"> 
+ - Firefox (desktop)
+ <img src="./readme-images/firefox.png" alt="Firefox Desktop"> 
+ - Chrome (iPhone 11)
+ <img src="./readme-images/chrome-mobile.jpeg" alt="Chrome Mobile"> 
+ - Safari (iPhone 11)
+ <img src="./readme-images/safari-mobile.jpeg" alt="Safari Mobile"> 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies used 🛠
+<hr>
+<p align="left">
+<a href="https://reactjs.org/" target="_blank">
+<img width="80" height="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="Next JS">
+</a>
+-
+<a href="https://www.typescriptlang.org/" target="_blank">
+<img width="80" height="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="Typescript">
+</a>
+-
+<a href="https://sass-lang.com/" target="_blank">
+<img width="80" height="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="Sass">
+</a>
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started 👷
+<hr>
+To start development, you need to clone the GitHub project into a directory of your choice:
 
-### `npm test`
+```shell
+cd "directory of your choice"
+git clone https://github.com/Thejuniordev/ds-web-teste.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+First, instal node_modules:
 
-### `npm run build`
+```bash
+npm i
+# or
+yarn
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Next, run the development server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm start
+# or
+yarn start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### `npm run eject`
+ ## Author 🎓
+ <hr>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<table align="center">
+    <tr>
+        <td align="center">
+            <a href="https://github.com/Thejuniordev">
+                <img src="https://avatars.githubusercontent.com/u/12980509?v=4" width="150px;" alt="Image do Junior Alves" />
+                <br />
+                <sub><b>Junior Alves</b></sub>
+            </a>
+        </td>    
+    </tr>
+</table>
+<br /> 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h4 align="center">
+   Made with 💜  by  <a href="https://www.linkedin.com/in/junior-alves-3a8b3296/" target="_blank"> Junior Alves 👋🏽 Entre em contato!</a>
+</h4>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ <a href="https://twitter.com/junyor_alves" target="_blank">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"/>
+  </a>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<hr>
+<img align="center" src="https://img.shields.io/apm/l/vim-mode">
