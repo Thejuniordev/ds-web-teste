@@ -1,20 +1,24 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { RefObject, useCallback, useEffect, useState } from "react";
 import numeral from 'numeral'
 import IMask from 'imask'
 
 import './InputText.scss';
 
-interface Props extends React.AriaAttributes {
+export interface Props extends React.AriaAttributes {
   field: string;
   color?: string;
   label?: string;
   placeholder?: string;
-  value?: string
-  messageError?: string
-  helpText?: string
+  className?: string;
+  value?: string;
+  status?: 'success' | 'warning' | 'error';
+  messageError?: string;
+  inputRef?: RefObject<any>;
+  helpText?: string;
   tabIndex?: number;
   disabled?: boolean;
+  invalid?: boolean;
   type?: string;
   size?: string;
   pattern?: string
@@ -35,11 +39,15 @@ export const InputText: React.FC<Props> = ({
     color,
     label,
     placeholder,
+    className: classNameProp,
     value: valueProp,
+    status,
     helpText,
     messageError,
+    inputRef,
     tabIndex,
     disabled = false,
+    invalid,
     type,
     size,
     pattern,
@@ -55,6 +63,15 @@ export const InputText: React.FC<Props> = ({
     onClick,
     ...props
   }) => {
+
+  const classesFromObject = (classes: any, additionalClassName?: string) => {
+    const availableClasses = [
+      ...Object.keys(classes).filter((cls?: string) => cls && !!classes[cls]),
+      ...[additionalClassName]
+    ]
+  
+    return availableClasses.join(' ')
+  }
 
   const formatMask = useCallback(
     (value: string | number): string => {
@@ -117,26 +134,24 @@ export const InputText: React.FC<Props> = ({
   )
 
   const [value, setValue] = useState(formatIn(valueProp))
+  const [focused, setFocused] = useState(false)
 
+  const classes: any = {
+    disabled: disabled,
+    error: invalid || messageError || status === 'error',
+    success: status === 'success',
+    warning: status === 'warning',
+    focus: focused,
+  }
+  const classesInput: any = {
+    '--has-value': !!value
+  }
+  const className = classesFromObject(classes, classNameProp)
+  const classNameInput = classesFromObject(classesInput)
   
-
-  const inputRef = useRef<any>(null);
-
-	const _handleChange = (event: any) => {
-    if (event.target.parentElement) { 
-      if (event.target.value.length === 0) {
-        event.target.parentElement.classList.remove("input__filled");
-      } else if (event.target.parentElement) {
-        event.target.parentElement.classList.add("input__filled");
-      }
-      
-      if (event.currentTarget === document.activeElement) {
-        event.target.parentElement.classList.add("input__focus");
-      } else {
-        event.target.parentElement.classList.remove("input__focus");
-      }
-    }
-	}
+  const onFocused = () => {
+    setFocused(true)
+  }
 
   const onChangeLocal = useCallback(
     (ev: React.ChangeEvent<HTMLInputElement>) => {
@@ -164,32 +179,10 @@ export const InputText: React.FC<Props> = ({
     }
   }, [valueProp, value, formatIn])
 
-  useEffect(() => {
-        if (inputRef.current) {
-          
-          // Bind the event listener
-          inputRef.current.addEventListener("change", _handleChange);
-          inputRef.current.addEventListener("blur", _handleChange);
-          inputRef.current.addEventListener("focus", _handleChange)
-        };
-        
-        return () => {
-          if (inputRef.current) {
-            // Unbind the event listener on clean up
-            inputRef.current.removeEventListener("change", _handleChange);
-            inputRef.current.removeEventListener("blur", _handleChange);
-            inputRef.current.removeEventListener("focus", _handleChange);
-          }
-        };
-  }, [inputRef]);
-
   return (
     <div 
       tabIndex={-1}
-      className={`
-        input${color ? '--' + color : ''} 
-        ${disabled ? "input__disabled" : ""} 
-        ${size ? "input__" + size : ""}`}
+      className={`input input__${size} ${className}`}
     >
       <label
         className="input__label"
@@ -200,6 +193,7 @@ export const InputText: React.FC<Props> = ({
       <input
         tabIndex={disabled || !tabIndex ? -1 : tabIndex}
         placeholder={placeholder}
+        className={classNameInput}
         type={type}
         id={field}
         value={value}
@@ -208,7 +202,12 @@ export const InputText: React.FC<Props> = ({
         readOnly={disabled}
         onClick={onClick}
         onChange={onChangeLocal}
-        onFocus={onFocus}
+        onFocus={(ev) => {
+          if (onFocus) {
+            onFocus(ev)
+          }
+          onFocused()
+        }}
         onBlur={onBlur}
         onKeyDown={onKeyDown}
         onKeyUp={onKeyUp}

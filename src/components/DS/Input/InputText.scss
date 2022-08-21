@@ -4,6 +4,25 @@
     position: relative;
     width: 100%;
 
+    &.error {
+        .input {
+            &__error {
+                display: none;
+            }
+        }
+        &.focus {
+            input {
+               border: 1px solid $error; 
+            }
+
+            .input {
+                &__error {
+                    display: block;
+                }
+            }
+        }
+    }
+
     &__label {
         display: block;
         font-size: $paragraph;

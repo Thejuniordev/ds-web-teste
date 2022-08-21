@@ -8,9 +8,7 @@ export const Form = () => {
     const [ phone, setPhone ] = useState('')
     const [ document, setDocument ] = useState('')
     const [ email, setEmail ] = useState('')
-    const [ error, setError ] = useState(false)
 
-    console.log('Valor da bagaça', phone)
     return (
         <form className='form'>
             <div className="form__content">
@@ -50,7 +48,12 @@ export const Form = () => {
                     messageError={!email ? 'E-mail obrigatório' : ''} 
                 />
             </div>
-            <Button color={'default'} disabled={true} size='medium'>Próximo</Button>
+            <Button 
+                color={'default'} 
+                disabled={phone && document && email ? false : true} size='medium'
+            >
+                Próximo
+            </Button>
         </form>
     );
 }
