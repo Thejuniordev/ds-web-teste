@@ -10,8 +10,6 @@ export const Form = () => {
     const [ email, setEmail ] = useState('')
     const [ formData, setFormData] = useState({})
 
-
-
     const handleSubmit = (e: any) => {
         e.preventDefault()
         setFormData({
