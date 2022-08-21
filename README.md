@@ -16,12 +16,8 @@
         <li>Ao clicar no botão "Enviar" todas as informações preenchidas em cada campo deve aparecer no console dentro de um objeto para demonstrar a funcionalidade</li>
     </ul>
 
-## Tools 🛠️
+## Note 💎
 <hr>
- - React
- <br>
- - Further increase the knowledge base of beginning devs.
- <br>
  - Made with perfect pixel
 
 ## Screenshots Cross-Browser 🖼
