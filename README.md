@@ -21,6 +21,8 @@
  - React
  <br>
  - Further increase the knowledge base of beginning devs.
+ <br>
+ - Made with perfect pixel
 
 ## Screenshots Cross-Browser 🖼
 <hr>
@@ -36,6 +38,12 @@
  <img src="./readme-images/chrome-mobile.jpeg" alt="Chrome Mobile"> 
  - Safari (iPhone 11)
  <img src="./readme-images/safari-mobile.jpeg" alt="Safari Mobile"> 
+
+## Screenshots Perfect Pixel 🖼
+ <img src="./readme-images/perfect-pixel.png" alt="Perfect Pixel"> 
+
+ ## Data sending  🖼
+ <img src="./readme-images/data.png" alt="Data sending"> 
 
 ## Technologies used 🛠
 <hr>
@@ -62,7 +70,7 @@ cd "directory of your choice"
 git clone https://github.com/Thejuniordev/ds-web-teste.git
 ```
 
-First, instal node_modules:
+First, install node_modules:
 
 ```bash
 npm i
