@@ -2,6 +2,10 @@
 
 .main {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 
     &__logo {
         display: flex;
@@ -14,5 +18,14 @@
         font-weight: $font-weight-medium;
         text-align: center;
         margin-top: $spacing-xxl;
+    }
+
+    &__footer {
+        border-top: 1px solid $gray;
+        padding: 16px;
+        &--content {
+            font-size: $caption;
+            text-align: center;
+        }
     }
 }
