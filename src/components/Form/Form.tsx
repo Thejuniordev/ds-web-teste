@@ -8,9 +8,23 @@ export const Form = () => {
     const [ phone, setPhone ] = useState('')
     const [ document, setDocument ] = useState('')
     const [ email, setEmail ] = useState('')
+    const [ formData, setFormData] = useState({})
+
+
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault()
+        setFormData({
+            "Celular": phone,
+            "CPF": document,
+            "E-mail": email,
+        })
+    }
+
+    console.log('Valor dos campos:', formData)
 
     return (
-        <form className='form'>
+        <form className='form' onSubmit={handleSubmit}>
             <div className="form__content">
                 <InputText 
                     tabIndex={1}
